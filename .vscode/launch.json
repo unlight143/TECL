@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["brightkite_test_exp", "-dataset", "brightkite", "-lambda", "1e-3", "-class_emb", "256", "-max_epoch", "45", "-cuda", "-topk", "5"],
+            "args": ["brightkite_test_exp", "-dataset", "brightkite", "-lambda", "1e-3", "-class_emb", "256", "-max_epoch", "100", "-cuda", "-topk", "10"],
             "justMyCode": true
         }
     ]

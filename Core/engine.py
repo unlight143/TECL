@@ -430,6 +430,9 @@ class CLIFModelEngine(MultiLabelEngine):
                              self.state['ave_loss'].value()[0],
                              self.state['ave_cls_loss'].value()[0],
                              self.state['ave_emb_loss'].value()[0]))
+                with open('record_data.txt', 'a') as lf:
+                    write_str = '{:.4f} {:.4f} {:.6f}\n'.format(self.state['ave_loss'].value()[0], self.state['ave_cls_loss'].value()[0],  self.state['ave_emb_loss'].value()[0] * 10000)
+                    lf.write(write_str) 
             else:
                 print('Test: \t Average Loss {:.4f}\t AP {:.4f}\t HammingLoss {:.4f}'.
                       format(self.state['ave_loss'].value()[0],

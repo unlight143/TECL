@@ -245,7 +245,7 @@ class dataset1():
         #                     check_y_dict[fxy].append(x1)
         # new load end
 
-        for line in LAdata:
+        for line in NYdata:
             checkx = int(line[0])
             checky = int(line[4])
             
@@ -275,10 +275,10 @@ class dataset1():
 
         checkxlist = []
         data = []
-        # NY: -0 other: +410 4: +1200 6: +600 8: +500 12: +350 14: +300 5: +900 LA: -140 other: +10 4: +100 6: +30 5: +65
+        # NY: -0 other: +410 4: +1200 6: +600 8: +500 12: +300 14: +300 5: +900 LA: -140 other: +10 4: +100 6: +30 5: +65
         for cx, cylist in check_dict.items():
             if len(cylist) < 6:
-                if len(checkxlist) == test_size-140:
+                if len(checkxlist) == test_size-0:
                     break
                 else:
                     checkxlist.append(cx)
@@ -294,7 +294,7 @@ class dataset1():
         tmp_cxllen = len(checkxlist)
         for cx, cylist in check_dict.items():
             if len(cylist) < 6:
-                if len(checkxlist) == tmp_cxllen+65:
+                if len(checkxlist) == tmp_cxllen+300:
                     break
                 else:
                     if cx not in checkxlist:
@@ -639,7 +639,7 @@ class dataset2():
         #                 data.append([cx, cy])
 
 
-        for line in LAdata:
+        for line in NYdata:
             checkx = int(line[0])
             checky = line[4]
             
@@ -683,7 +683,7 @@ class dataset2():
 
         for cx, cylist in check_dict.items():
             if len(cylist) >= 6:
-                if len(checkxlist) == 320+190:
+                if len(checkxlist) == 320+62:
                     break
                 else:
                     checkxlist.append(cx)
@@ -693,7 +693,7 @@ class dataset2():
         tmp_cxllen = len(checkxlist) # NY: 92 LA: 210
         for cx, cylist in check_dict.items():
             if len(cylist) < 6:
-                if len(checkxlist) == tmp_cxllen+150:
+                if len(checkxlist) == tmp_cxllen+2:
                     break
                 else:
                     if cx not in checkxlist:
